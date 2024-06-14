@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <script>
+        function searchContent() {
+            var searchInput = document.getElementById("searchInput").value.toLowerCase();
+            var redirectURL = '';
+    
+            switch (searchInput) {
+                
+                    case "maldivas":
+                        redirectURL = "place1.html";
+                        break;
+                    case "login":
+                        redirectURL = "https://localhost/MProject/login.php";
+                        break;
+                    case "japan":
+                        redirectURL = "place2.html";
+                        break;
+                    case "sydney":
+                        redirectURL = "place3.html";
+                        break;
+                    case "canada":
+                        redirectURL = "place4.html";
+                        break;
+                    case "spain":
+                        redirectURL = "place5.html";
+                        break;
+                    case "india":
+                        redirectURL = "india.html";
+                        break;
+                    case "austraila":
+                        redirectURL = "austraila.html";
+                        break;
+                default:
+                    redirectURL = "start.html";
+            }
+    
+            // Redirect to the determined URL
+            if (redirectURL) {
+                window.location.href = redirectURL;
+            }
+        }
+    </script>
+        
+    
+    
+        
+    </head>
+    
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(48, 47, 47);
+            color: white;
+        }
+
+        .section1 {
+            background-image: url("https://www.w3schools.com/howto/img_mountains_wide.jpg");
+            padding: 20px;
+            background-size: cover;
+        }
+
+        .element1 {
+            margin-bottom: 20px;
+        }
+
+        .ele1 {
+            overflow: hidden;
+        }
+
+        .ele1 a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 18px;
+            text-decoration: none;
+        }
+
+        .ele1 a:hover {
+            background-color: grey;
+            color: black;
+        }
+
+        .ele1 a.right {
+            float: right;
+        }
+
+        .example {
+            display: flex;
+        }
+
+        .search {
+            flex: 1;
+            padding: 10px;
+            border: black solid 2px;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .search:focus {
+            outline: none;
+        }
+
+        .example button {
+            padding: 10px;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            background: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        .search {
+            width: 200PX;
+        }
+
+        .element2 {
+            text-align: center;
+            height: 200px;
+            font-size: larger;
+
+        }
+        a{
+            color: #ddd;
+            text-decoration: none;
+        }
+
+        .element3 {
+            /* Adjust the height as needed */
+            display: flex;
+            color: #ddd;
+            padding: 6%;
+            justify-content: space-between;
+            text-align: right;
+        }
+
+        .bod {
+            border: #ddd;
+            display: flex;
+            background-color: rgb(106, 70, 70);
+            color: #fff;
+            height: 40px;
+            font-size: medium;
+            border-radius: 25px;
+            align-items: center;
+            padding-left: 5%;
+            padding-right: 5%;
+            text-align: center;
+        }
+
+        .sec1 {
+            height: 300px;
+            width: 180px;
+            border-radius: 10px;
+            background-size: cover;
+            border: solid black 2px;
+            background-image: url(pic1.jpg)
+        }
+
+        .sec2 {
+            height: 300px;
+            width: 180px;
+            border-radius: 10px;
+            border: solid black 2px;
+            background-size: cover;
+            background-image: url("https://hips.hearstapps.com/hbz.h-cdn.co/assets/16/16/1280x1919/japan-gettyimages-137098062.jpg?resize=980:*")
+        }
+
+        .sec3 {
+            height: 300px;
+            width: 180px;
+            border-radius: 10px;
+            border: solid black 2px;
+            background-size: cover;
+            background-image: url("https://i.insider.com/5d37715d36e03c3ec304ccd6?width=1000&format=jpeg&auto=webp")
+        }
+
+        .sec4 {
+            height: 300px;
+            width: 180px;
+            border-radius: 10px;
+            border: solid black 2px;
+            background-size: cover;
+            background-image: url("https://hips.hearstapps.com/hmg-prod/images/banff-517747003-1494616292.jpg?crop=0.9997418022205009xw:1xh;center,top&resize=980:*")
+        }
+
+        .sec5 {
+            height: 300px;
+            width: 180px;
+
+
+
+
+    
+            border-radius: 10px;
+            border: solid black 2px;
+            background-size: cover;
+            background-image: url("https://hips.hearstapps.com/hmg-prod/images/barcelona-parc-guell-at-sunset-royalty-free-image-1571860792.jpg?crop=1xw:1xh;center,top&resize=980:*")
+        }
+
+        .section2 {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 100px;
+            margin-top: 30px;
+            margin-right: 100px;
+        }
+
+        .text-head {
+            margin: 15px;
+            margin-top: 200px;
+            margin-bottom: 0px;
+            color: white;
+        }
+
+        .bg-circle {
+            z-index: -1;
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: var(--sphere-gradient-one);
+            right: -250px;
+        }
+
+        /* book now section */
+
+        .book-section {
+            position: relative;
+            display: flex;
+            padding: 0 10vw;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            gap: 30px;
+        }
+
+        .book-now-img {
+            position: relative;
+            width: 30%;
+            height: 50%;
+            right: 8;
+            background: transparent;
+        }
+
+        .book-content {
+            width: 50%;
+            color: #fff;
+        }
+
+        .book-now-title {
+            font-size: 50px;
+            font-weight: 300;
+            width: 300px;
+        }
+
+        .book-now-text {
+            width: 300px;
+            opacity: 0.5;
+            line-height: 25px;
+            margin: 30px 0;
+        }
+
+        .book-now {
+            position: relative;
+            padding: 10px 20px;
+            outline: none;
+            border: none;
+            background: #000;
+            text-transform: capitalize;
+            color: #fff;
+            border-radius: 20px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            font-size: 18px;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .book-now::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -30px;
+            width: 20px;
+            height: 200%;
+            background: #fff;
+            opacity: 0.2;
+            transform: rotate(5deg);
+            transition: .5s;
+        }
+
+        .book-now:hover::before {
+            left: 100%;
+        }
+
+        .bg-circle-2 {
+            z-index: -1;
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: var(--sphere-gradient-two);
+            left: -125px;
+            bottom: -100px;
+        }
+
+        .footer {
+            width: 100%;
+            padding: 100px 10vw;
+            background: #000;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            align-items: center;
+            position: relative;
+        }
+
+        .footer-logo {
+            width: 30%;
+            opacity: 0.3;
+        }
+
+        .footer-text {
+            color: white;
+            opacity: 0.9;
+            font-size: 20px;
+        }
+
+        .footer-text p {
+            margin: 20px 0;
+        }
+
+        .copyright-line {
+            width: 100%;
+            background: #000;
+            color: #fff;
+            text-transform: capitalize;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 10px 0;
+        }
+
+        .sec1 {
+            background-color: white;
+            color: rgb(251, 5, 5);
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+        }
+        .sec2 {
+            background-color: white;
+            color: rgb(251, 5, 5);
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+        }
+        .sec3 {
+            background-color: white;
+            color: rgb(251, 5, 5);
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+        }
+        .sec4 {
+            background-color: white;
+            color: rgb(251, 5, 5);
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+        }
+        .sec5 {
+            background-color: white;
+            color: rgb(251, 5, 5);
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .text-head {
+            display: none;
+        }
+
+        .sec1:hover .text-head {
+            color: rgb(251, 5, 5);
+            display: block;
+        }
+        .sec2:hover .text-head {
+            color: rgb(251, 5, 5);
+            display: block;
+        }
+        .sec3:hover .text-head {
+            color: rgb(251, 5, 5);
+            display: block;
+        }
+        .sec4:hover .text-head {
+            color: rgb(251, 5, 5);
+            display: block;
+        }
+        .sec5:hover .text-head {
+            color: rgb(251, 5, 5);
+            display: block;
+        }
+        .trend{
+            background-color: #4CAF50;
+            width: 70%;
+            text-decoration: wavy;
+            
+        }
+    </style>
+    <title>Dream Destination Gateway</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <div class="section1">
+        <div class="element1">
+            <nav class="ele1">
+                <B>
+                    <a href="http://localhost/MProject/admin/login.php">Admin</a>
+                    
+                    <a href="tickets.html">Tickets</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="http://localhost/MProject/logout.php">LogOut</a>
+                    <a href="#" class="right">
+                        <a href="#" class="right">
+                            <!-- <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+                                <input class="search" type="text" placeholder="Dream Destination Gateway" name="search2">
+                                <button type="button" onclick="searchContent()">Search</button>
+                            </form> -->
+                            <form class="example">
+                                <input  type="text" class="search" id="searchInput" placeholder="Enter your search" name="search2">
+                                <button type="button" onclick="searchContent()">Search</button>
+                            </form>
+                        </a>
+                    </B>
+                </nav>
+    
+            </div>
+            <div class="element2">
+                <br>
+                <br>
+                <br>
+                <b>
+                    <h3>Welcome to</h3>
+                    <h1>Dream Destination Gateway</h1>
+                </b>
+            </div>
+            <div class="element3">
+                <div class="bod"><a href="#f1">Places to Go</a></div>
+                <div class="bod"><a href="tickets.html">Tickets</a></div>
+                
+                <div class="bod"><a href="package.html">Packages</a></div>
+                <div class="bod"><a href="review.html">Reviews</a></div>
+            </div>
+        </div>
+        <div>
+            <h1 id="f1">Places to GO</h1>
+        </div>
+        <div class="section2">
+            <div class="sec1">
+                <b><p class="trend">Trending Now</p></b>
+                <a href="place1.html">
+                    
+                    <div class="text-head">
+                        <h2>Maldives</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="sec2">
+                <b><p class="trend">Trending Now</p></b>
+                <a href="place2.html">
+                    <div class="text-head">
+                        <h2>Japan</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="sec3">
+                <b><p class="trend">Trending Now</p></b>
+                <a href="place3.html">
+    
+                    <div class="text-head">
+                        <h2>Sydney</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="sec4">
+                <b><p class="trend">Trending Now</p></b>
+                <a href="place4.html">
+    
+                    <div class="text-head">
+                        <h2>Canada</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="sec5 ">
+                <b><p class="trend">Trending Now</p></b>
+                <a href="place5.html">
+    
+                    <div class="text-head">
+                        <h2>Spain</h2>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+    
+        <!-- footer -->
+        <footer class="footer">
+            <img src="contact.jpg" class="footer-logo" alt="">
+            <div class="footer-text">
+                <p>Travel the world, on this holiday</p>
+                <p><i><img src="mail.png" class="logo" alt=""></i>Email - support@DDGtravel.com</p>
+                <p><i><img src="instaa.png" class="logo" alt=""></i>Instagram - dreamdestinationgateway.</p>
+                <p><img src="phn.gif" class="logo" alt=""></i>Phone - 98xxxxxxxx, 99xxxxxxxx</p>
+                </ul>
+            </div>
+            <p class="copyright-line">By Dream Destination Gateway ❤️</p>
+        </footer>
+    
+    </body>
+    
+    </html>

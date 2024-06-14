@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews</title>
+    <style>
+        body {
+
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+        .checked {
+            color: orange;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .review {
+            width: 48%;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #121111;
+            color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .user-info img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .user-info .user-name {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+        }
+
+        .rating img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        .comment {
+            font-size: 1.1em;
+        }
+        .footer {
+            width: 100%;
+            padding: 100px 10vw;
+            background: #000;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            align-items: center;
+            position: relative;
+        }
+
+        .footer-logo {
+            width: 30%;
+            opacity: 0.3;
+        }
+
+        .footer-text {
+            color: white;
+            opacity: 0.9;
+            font-size: 20px;
+        }
+
+        .footer-text p {
+            margin: 20px 0;
+        }
+
+        .copyright-line {
+            width: 100%;
+            background: #000;
+            color: #fff;
+            text-transform: capitalize;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 10px 0;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Customer Reviews</h1>
+    </header>
+
+    <section>
+        <h2>What Our Customers Are Saying</h2>
+
+        <div class="review-container">
+            <div class="review">
+                <div class="user-info">
+                    <img src="yamu.png" alt="User 1">
+                    <div class="user-name">LIKHITHA</div>
+                </div>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <p class="comment">Had an amazing experience with the beach package. The views were breathtaking!</p>
+            </div>
+
+            <div class="review">
+                <div class="user-info">
+                    <img src="archu.png" alt="User 2">
+                    <div class="user-name">ARCHANA</div>
+                </div>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+                <p class="comment">The professional package exceeded my expectations. Worth every penny!</p>
+            </div>
+
+            <div class="review">
+                <div class="user-info">
+                    <img src="likki.png" alt="User 3">
+                    <div class="user-name">YAMINI</div>
+                </div>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <p class="comment">The city tour was fantastic! Loved every moment of it.</p>
+            </div>
+
+            <div class="review">
+                <div class="user-info">
+                    <img src="nani.png" alt="User 4">
+                    <div class="user-name">NANI</div>
+                </div>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <p class="comment">Great service and amazing landscapes during the mountain tour.</p>
+            </div>
+
+            <div class="review">
+                <div class="user-info">
+                    <img src="img1.jpeg" alt="User 5">
+                    <div class="user-name">BHAVANA</div>
+                </div>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <p class="comment">I highly recommend the deluxe package. It was a luxurious and unforgettable
+                    experience.</p>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+        <img src="contact.jpg" class="footer-logo" alt="">
+        <div class="footer-text">
+            <p>Travel the world, on this holiday</p>
+            <p><i><img src="mail.png" class="logo" alt=""></i>Email - support@DDGtravel.com</p>
+            <p><i><img src="instaa.png" class="logo" alt=""></i>Instagram - _dreamdestinationgateway._</p>
+            <p><img src="phn.gif" class="logo" alt=""></i>Phone - 98xxxxxxxx, 99xxxxxxxx</p>
+            </ul>
+        </div>
+        <p class="copyright-line">By Dream Destination Gateway ❤️</p>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<?xml version = "1.0" ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//Dtd XHTML 1.00 Strict//EN" "http://www.w3.org/tr/xhtml1/Dtd/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <style>
+        body{
+            background-image: linear-gradient(to right, #5a819c,#905a9c); 
+        }
+        
+    </style>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match. Please try again.");
+            } else {
+                alert("Registration successful!");
+            }
+        }
+       
+            
+        
+    </script>
+
+    
+   
+    <link rel="stylesheet" href="style.css" />
+    <title>Homepage</title>
+
+</head>
+
+<body>
+
+   
+    
+    <div class="y1">
+    
+        <div>
+            <center>
+        <h1>Signup</h1>
+        <form id="signupForm" onsubmit="submitForm(event)">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+    
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+    
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+    
+            <input class="GotoHome" type="submit" value="Sign Up">
+            
+        </form>
+       
+            
+        
+        
+    
+    <font size="6px">
+    <p>Already have an account? <a href="log.html">Login</a></p>
+</font>
+</center>
+</div>
+    </div>
+
+    
+</body>
+
+</html>

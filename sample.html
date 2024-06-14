@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .feedback-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .rating-container {
+            margin-bottom: 20px;
+        }
+
+        .rating-container input {
+            display: none;
+        }
+
+        .rating-container label {
+            cursor: pointer;
+            font-size: 30px;
+            color: #ddd;
+            transition: color 0.3s;
+        }
+
+        .rating-container input:checked + label {
+            color: #ffcc00;
+        }
+
+        .comments {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+
+        .submit-button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+    <title>Feedback Form</title>
+</head>
+<body>
+
+    <div class="feedback-container">
+        <h2>Feedback Form</h2>
+        
+        <div class="rating-container">
+            <input type="radio" id="star5" name="rating" value="5" />
+            <label for="star5">&#9733;</label>
+            <input type="radio" id="star4" name="rating" value="4" />
+            <label for="star4">&#9733;</label>
+            <input type="radio" id="star3" name="rating" value="3" />
+            <label for="star3">&#9733;</label>
+            <input type="radio" id="star2" name="rating" value="2" />
+            <label for="star2">&#9733;</label>
+            <input type="radio" id="star1" name="rating" value="1" />
+            <label for="star1">&#9733;</label>
+        </div>
+
+        <textarea class="comments" placeholder="Enter your comments"></textarea>
+
+        <button class="submit-button" onclick="submitFeedback()">Submit Feedback</button>
+    </div>
+
+    <script>
+        function submitFeedback() {
+            // Assuming you want to gather the selected rating and comments
+            var rating = document.querySelector('input[name="rating"]:checked');
+            var comments = document.querySelector('.comments').value;
+
+            // Display alert with feedback details
+            alert("Thank you for your feedback!\nRating: " + (rating ? rating.value : "N/A") + "\nComments: " + comments);
+
+            // Redirect back to the original page (change the URL as needed)
+            window.location.href = "original_page.html";
+        }
+    </script>
+
+</body>
+</html>

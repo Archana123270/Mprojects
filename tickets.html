@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .booking-container {
+            background-color: rgba(192, 187, 187, 0.558);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(221, 210, 210, 0.1);
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .section input, .section select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        .people-details-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .people-details-container .person-details {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+
+        .people-details-container .person-details label {
+            margin-bottom: 5px;
+        }
+
+        .people-details-container .person-details input, .people-details-container .person-details select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .price-details {
+            text-align: left;
+        }
+
+        .price-details p {
+            margin: 5px 0;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+    <title>Travel Booking</title>
+</head>
+<body>
+
+    <div class="booking-container">
+        <div class="section">
+            <h2>User Details</h2>
+            <label for="numberOfPeople">Number of People:</label>
+            <input type="number" id="numberOfPeople" placeholder="Enter number of people" />
+
+            <label for="dateOfTravel">Date of Travel:</label>
+            <input type="date" id="dateOfTravel" />
+
+            <label for="contactDetails">Contact Details:</label>
+            <input type="text" id="contactDetails" placeholder="Enter contact details" />
+        </div>
+
+
+        <div class="section">
+            <h2>Price Details</h2>
+            <div class="price-details" id="priceDetails"></div>
+        </div>
+
+        <button onclick="calculatePrice()">Calculate Price</button>
+    </div>
+
+    <script>
+        function addPerson() {
+            var container = document.getElementById('peopleDetailsContainer');
+            var personDetails = document.createElement('div');
+            personDetails.classList.add('person-details');
+
+            var nameLabel = document.createElement('label');
+            nameLabel.innerText = 'Name:';
+            personDetails.appendChild(nameLabel);
+
+            var nameInput = document.createElement('input');
+            nameInput.type = 'text';
+            nameInput.placeholder = 'Enter name';
+            personDetails.appendChild(nameInput);
+
+            var ageLabel = document.createElement('label');
+            ageLabel.innerText = 'Age:';
+            personDetails.appendChild(ageLabel);
+
+            var ageInput = document.createElement('input');
+            ageInput.type = 'number';
+            ageInput.placeholder = 'Enter age';
+            personDetails.appendChild(ageInput);
+
+            var genderLabel = document.createElement('label');
+            genderLabel.innerText = 'Gender:';
+            personDetails.appendChild(genderLabel);
+
+            var genderSelect = document.createElement('select');
+            genderSelect.innerHTML = '<option value="male">Male</option><option value="female">Female</option><option value="other">Other</option>';
+            personDetails.appendChild(genderSelect);
+
+            container.appendChild(personDetails);
+        }
+
+        function calculatePrice() {
+            var numberOfPeople = parseInt(document.getElementById('numberOfPeople').value);
+            var adultCostPerDay = 1540;
+            var childCostPerDay = 630;
+            var dateOfTravel = new Date(document.getElementById('dateOfTravel').value);
+            var contactDetails = document.getElementById('contactDetails').value;
+
+            var totalAdultCost = numberOfPeople * adultCostPerDay;
+            var totalChildCost = numberOfPeople * childCostPerDay;
+            var totalCost = totalAdultCost + totalChildCost;
+
+            var priceDetailsContainer = document.getElementById('priceDetails');
+            priceDetailsContainer.innerHTML = '';
+
+            var totalPriceElement = document.createElement('p');
+            totalPriceElement.innerText = 'Total Price: ₹' + totalCost;
+            priceDetailsContainer.appendChild(totalPriceElement);
+
+            var adultPriceElement = document.createElement('p');
+            adultPriceElement.innerText = 'Adults (₹' + adultCostPerDay + '/day): ₹' + totalAdultCost;
+            priceDetailsContainer.appendChild(adultPriceElement);
+
+            var childPriceElement = document.createElement('p');
+            childPriceElement.innerText = 'Children (₹' + childCostPerDay + '/day): ₹' + totalChildCost;
+            priceDetailsContainer.appendChild(childPriceElement);
+
+            var travelDateElement = document.createElement('p');
+            travelDateElement.innerText = 'Date of Travel: ' + dateOfTravel.toDateString();
+            priceDetailsContainer.appendChild(travelDateElement);
+
+            var contactDetailsElement = document.createElement('p');
+            contactDetailsElement.innerText = 'Contact Details: ' + contactDetails;
+            priceDetailsContainer.appendChild(contactDetailsElement);
+        }
+    </script>
+
+</body>
+</html>
