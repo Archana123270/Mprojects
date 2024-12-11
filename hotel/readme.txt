@@ -1,4 +1,4 @@
-Free Download Source Code "Hotel Booking Management System"
+Download Source Code "Hotel"
 
 FIRST Download
 
@@ -25,11 +25,8 @@ FIRST Download
 
 **LOGIN DETAILS** 
 
-Create your own User
-
 Admin
 user: admin
 pass: admin123
 
-****** https:1sourcecodr.blogspot.com ******
-Subcribe my You tube Channel **** 1 Source code ****
+Create your own User
